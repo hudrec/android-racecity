@@ -1,6 +1,7 @@
 package pe.edu.upc.racecity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceiveMessage(WebAppSession webAppSession, Object o) {
 
-//            if(o.equals("conectado"))
+            if(o.equals("conectado"))
+                startActivity(new Intent(getApplicationContext(), DataActivity.class));
 
-//                activarBotones();
 //            if(o.equals("empezarJuego"))
 //                iniciarJuego();
 //            if(o.equals("tuTurno"))

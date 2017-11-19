@@ -7,18 +7,42 @@
     android:background="@drawable/fondo"
     tools:context="pe.edu.upc.racecity.MainActivity">
 
-
-
-
     <Button
+        android:id="@+id/entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SELECCIONAR TV"
-        android:id="@+id/btn_conectar"
         android:layout_centerHorizontal="true"
+        android:background="@null"
         android:gravity="center"
+        android:onClick="entrar"
+        android:text="Avanzar"
+        android:textColor="#fe0030"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="159dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <Button
+        android:id="@+id/btn_conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/seleccionar_tv"
+        android:gravity="center"
         android:onClick="conectar"
+        android:text="SELECCIONAR TV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

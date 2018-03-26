@@ -2,6 +2,7 @@ package pe.edu.upc.racecity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,6 +63,15 @@ public class AutoActivity extends AppCompatActivity {
     }
 
     public void seleccionar(View view){
-        view.setBackgroundColor(0);
+        View caraView = (View)findViewById(R.id.autoa);
+        caraView.setBackgroundColor(0);
+        View carrView = (View)findViewById(R.id.autor);
+        carrView.setBackgroundColor(0);
+        View carcView = (View)findViewById(R.id.autoc);
+        carcView.setBackgroundColor(0);
+        View carvView = (View)findViewById(R.id.autov);
+        carvView.setBackgroundColor(0);
+
+        view.setBackgroundColor(getResources().getColor(R.color.black_overlay));
     }
 }

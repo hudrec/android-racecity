@@ -39,27 +39,27 @@ public class AutoActivity extends AppCompatActivity {
         if(extras !=null) {
             nombre = extras.getString("nombre");
         }
-        Intent auto = new Intent(AutoActivity.this, MandoActivity.class);
-        startActivity(auto);
-//        ConnectionHelper.webAppSession.sendMessage(new JSONObject() {
-//            {
-//                try {
-//                    put("nombre", nombre);
-//                    put("carro", nombre);
-//                } catch (JSONException ex) {
-//                }
-//            }
-//        }, new ResponseListener<Object>() {
-//            @Override
-//            public void onSuccess(Object o) {
-//
-//            }
-//
-//            @Override
-//            public void onError(ServiceCommandError serviceCommandError) {
-//
-//            }
-//        });
+        Intent mando = new Intent(AutoActivity.this, MandoActivity.class);
+        startActivity(mando);
+        ConnectionHelper.webAppSession.sendMessage(new JSONObject() {
+            {
+                try {
+                    put("nombre", nombre);
+                    put("carro", nombre);
+                } catch (JSONException ex) {
+                }
+            }
+        }, new ResponseListener<Object>() {
+            @Override
+            public void onSuccess(Object o) {
+
+            }
+
+            @Override
+            public void onError(ServiceCommandError serviceCommandError) {
+
+            }
+        });
     }
 
     public void seleccionar(View view){

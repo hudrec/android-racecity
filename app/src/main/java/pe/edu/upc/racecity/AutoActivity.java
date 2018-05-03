@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -18,6 +19,7 @@ import com.connectsdk.service.command.ServiceCommandError;
 
 public class AutoActivity extends AppCompatActivity {
     String nombre = "";
+    String carro = "autov";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,19 +47,20 @@ public class AutoActivity extends AppCompatActivity {
             {
                 try {
                     put("nombre", nombre);
-                    put("carro", nombre);
+                    put("carro", carro);
                 } catch (JSONException ex) {
+                    System.out.println("json error");
                 }
             }
         }, new ResponseListener<Object>() {
             @Override
             public void onSuccess(Object o) {
-
+                System.out.println("success");
             }
 
             @Override
             public void onError(ServiceCommandError serviceCommandError) {
-
+                System.out.println("error");
             }
         });
     }
@@ -72,6 +75,7 @@ public class AutoActivity extends AppCompatActivity {
         View carvView = (View)findViewById(R.id.autov);
         carvView.setBackgroundColor(0);
 
+        carro = String.valueOf(view.getTag());
         view.setBackgroundColor(getResources().getColor(R.color.black_overlay));
     }
 }

@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void entrar(View view){
+
+        if (ConnectionHelper.webAppSession == null){
+            System.out.println("webAppSession is null");
+            return;
+        }
+
         Intent juego = new Intent(MainActivity.this, DataActivity.class);
         startActivity(juego);
     }

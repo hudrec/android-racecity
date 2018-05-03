@@ -24,6 +24,12 @@ public class DataActivity extends AppCompatActivity {
     public void pasar(View view){
         EditText nombre_txt = (EditText) findViewById(R.id.nombre);
         String nombre = nombre_txt.getText().toString();
+
+        if (ConnectionHelper.webAppSession == null || nombre.isEmpty()) {
+            System.out.println("webAppSession is null or name is empty");
+            return;
+        }
+
         Intent auto = new Intent(DataActivity.this, AutoActivity.class);
         auto.putExtra("nombre", nombre);
         startActivity(auto);

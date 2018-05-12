@@ -1,7 +1,9 @@
-package pe.edu.upc.racecity;
+package pe.edu.upc.racecity.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import pe.edu.upc.racecity.R;
 
 public class MandoActivity extends AppCompatActivity {
 

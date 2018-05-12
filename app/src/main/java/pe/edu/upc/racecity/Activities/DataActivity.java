@@ -1,4 +1,4 @@
-package pe.edu.upc.racecity;
+package pe.edu.upc.racecity.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import pe.edu.upc.racecity.ConnectionHelper;
+import pe.edu.upc.racecity.R;
 
 public class DataActivity extends AppCompatActivity {
 

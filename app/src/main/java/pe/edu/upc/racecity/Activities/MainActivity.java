@@ -1,4 +1,4 @@
-package pe.edu.upc.racecity;
+package pe.edu.upc.racecity.Activities;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -14,13 +14,12 @@ import com.connectsdk.device.ConnectableDevice;
 import com.connectsdk.device.DevicePicker;
 import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.service.WebOSTVService;
-import com.connectsdk.service.capability.listeners.ResponseListener;
 import com.connectsdk.service.command.ServiceCommandError;
 import com.connectsdk.service.sessions.WebAppSession;
 import com.connectsdk.service.sessions.WebAppSessionListener;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import pe.edu.upc.racecity.ConnectionHelper;
+import pe.edu.upc.racecity.R;
 
 public class MainActivity extends AppCompatActivity {
 

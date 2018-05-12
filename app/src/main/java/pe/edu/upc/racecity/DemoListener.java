@@ -8,6 +8,8 @@ package pe.edu.upc.racecity;
 import com.connectsdk.service.sessions.WebAppSession;
 import com.connectsdk.service.sessions.WebAppSessionListener;
 
+import pe.edu.upc.racecity.Activities.MainActivity;
+
 public class DemoListener implements WebAppSessionListener{
 
     MainActivity mainAct = new MainActivity();

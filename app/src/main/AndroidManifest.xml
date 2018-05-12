@@ -16,8 +16,9 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true">
         <activity
-            android:name=".WelcomeActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name=".Activities.WelcomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="landscape"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,16 +27,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".DataActivity"
+            android:name=".Activities.DataActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".AutoActivity"
+            android:name=".Activities.AutoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape"></activity>
 
@@ -44,7 +45,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MandoActivity"
+            android:name=".Activities.MandoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape"></activity>
     </application>

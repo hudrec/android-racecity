@@ -13,7 +13,7 @@ public class JsonHelper {
         try {
             JSONObject jsonObject = getDefaultAction(StringsHelper.CONNECT_PLAYER);
             jsonObject.put(StringsHelper.PLAYER, player);
-            jsonObject.put(StringsHelper.CAR, car);
+            jsonObject.put(StringsHelper.COLOR, car);
             return jsonObject;
         } catch (Exception ex) {
             return null;

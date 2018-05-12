@@ -18,7 +18,7 @@ import pe.edu.upc.racecity.R;
 
 public class AutoActivity extends AppCompatActivity {
     String nombre = "";
-    String carro = "autov";
+    String carro = "verde";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +34,6 @@ public class AutoActivity extends AppCompatActivity {
         if(extras !=null) {
             nombre = extras.getString("nombre");
         }
-        Intent mando = new Intent(AutoActivity.this, MandoActivity.class);
-        startActivity(mando);
         ConnectionHelper.webAppSession.sendMessage(JsonHelper.ConnectPlayer(nombre,carro),
             new ResponseListener<Object>() {
                 @Override
@@ -49,6 +47,8 @@ public class AutoActivity extends AppCompatActivity {
                 }
             }
         );
+        Intent mando = new Intent(AutoActivity.this, MandoActivity.class);
+        startActivity(mando);
     }
 
     public void seleccionar(View view){

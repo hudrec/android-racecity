@@ -19,6 +19,7 @@ import pe.edu.upc.racecity.R;
 public class AutoActivity extends AppCompatActivity {
     String nombre = "";
     String carro = "verde";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

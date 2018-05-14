@@ -47,7 +47,10 @@
             android:name=".Activities.MandoActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Activities.ControlActivity"></activity>
+        <activity
+            android:name=".Activities.ControlActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

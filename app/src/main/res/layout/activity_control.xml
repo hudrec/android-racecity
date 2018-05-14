@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/control_fondo"
     tools:context=".Activities.ControlActivity">
     <ImageView
         android:id="@+id/iv_jugador"
@@ -54,8 +55,8 @@
         android:layout_marginBottom="55dp"
         android:layout_marginLeft="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_izquierda"
-        app:layout_constraintStart_toEndOf="@id/iv_izquierda"
+        app:layout_constraintTop_toTopOf="@+id/izquierda"
+        app:layout_constraintStart_toEndOf="@+id/izquierda"
         app:srcCompat="@drawable/boton_abajo" />
     <ImageView
         android:id="@+id/iv_arriba"
@@ -64,11 +65,11 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="7dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/iv_izquierda"
-        app:layout_constraintStart_toEndOf="@id/iv_izquierda"
+        app:layout_constraintBottom_toTopOf="@+id/izquierda"
+        app:layout_constraintStart_toEndOf="@+id/izquierda"
         app:srcCompat="@drawable/boton_arriba"/>
     <ImageView
-        android:id="@+id/iv_izquierda"
+        android:id="@+id/izquierda"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -85,7 +86,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/iv_izquierda"
+        app:layout_constraintLeft_toRightOf="@+id/izquierda"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_derecho"
         />
@@ -94,16 +95,16 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_rojo"
-        app:layout_constraintStart_toEndOf="@id/iv_verde"
+        app:layout_constraintTop_toTopOf="@+id/iv_rojo"
+        app:layout_constraintStart_toEndOf="@+id/iv_verde"
         app:srcCompat="@drawable/boton_amarillo" />
     <ImageView
         android:id="@+id/iv_azul"
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/iv_rojo"
-        app:layout_constraintEnd_toStartOf="@id/iv_rojo"
+        app:layout_constraintBottom_toTopOf="@+id/iv_rojo"
+        app:layout_constraintEnd_toStartOf="@+id/iv_rojo"
         app:srcCompat="@drawable/boton_azul"/>
     <ImageView
         android:id="@+id/iv_verde"
@@ -112,7 +113,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/iv_rojo"
+        app:layout_constraintRight_toLeftOf="@+id/iv_rojo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boton_verde"
         />

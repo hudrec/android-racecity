@@ -49,7 +49,7 @@ public class AutoActivity extends AppCompatActivity {
                 }
             }
         );
-        Intent mando = new Intent(AutoActivity.this, MandoActivity.class);
+        Intent mando = new Intent(AutoActivity.this, ControlActivity.class);
         startActivity(mando);
     }
 

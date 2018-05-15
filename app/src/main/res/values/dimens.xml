@@ -1,5 +1,16 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="margin">50dp</dimen>
-    <dimen name="margin_boton">30dp</dimen>
+    <dimen name="margin_izquierdo">60dp</dimen>
+    <dimen name="size_jugador">50dp</dimen>
+    <dimen name="size_1">30dp</dimen>
+    <dimen name="size_2">60dp</dimen>
+    <dimen name="size_ci">200dp</dimen>
+    <dimen name="size_cd">300dp</dimen>
+    <dimen name="margin_jugador">200dp</dimen>
+    <dimen name="m1">22dp</dimen>
+    <dimen name="m2">60dp</dimen>
+    <dimen name="m3">30dp</dimen>
+    <dimen name="m4">40dp</dimen>
+    <dimen name="m5">45dp</dimen>
+
 </resources>

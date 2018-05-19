@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">750dp</dimen>
+    <dimen name="margin_izquierdo">90dp</dimen>
+    <dimen name="size_jugador">75dp</dimen>
+    <dimen name="size_1">45dp</dimen>
+    <dimen name="size_2">90dp</dimen>
+    <dimen name="size_ci">300dp</dimen>
+    <dimen name="size_cd">400dp</dimen>
+    <dimen name="margin_jugador">300dp</dimen>
+    <dimen name="m1">33dp</dimen>
+    <dimen name="m2">90dp</dimen>
+    <dimen name="m3">45dp</dimen>
+    <dimen name="m4">60dp</dimen>
+    <dimen name="m5">67.5dp</dimen>
+</resources>

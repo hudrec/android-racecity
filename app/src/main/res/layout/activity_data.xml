@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imagen"
-    tools:context="pe.edu.upc.racecity.DataActivity">
+    tools:context="pe.edu.upc.racecity.Activities.DataActivity">
 
     <ImageView
         android:layout_width="180dp"

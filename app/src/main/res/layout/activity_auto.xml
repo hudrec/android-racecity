@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imagen"
-    tools:context="pe.edu.upc.racecity.AutoActivity">
+    tools:context="pe.edu.upc.racecity.Activities.AutoActivity">
     <ImageView
         android:layout_width="130dp"
         android:layout_height="102dp"
@@ -21,6 +21,7 @@
         android:layout_height="159dp"
         android:src="@drawable/autoa"
         android:onClick="seleccionar"
+        android:tag="amarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -33,6 +34,7 @@
         android:layout_height="159dp"
         android:src="@drawable/autoc"
         android:onClick="seleccionar"
+        android:tag="azul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -45,6 +47,7 @@
         android:layout_height="159dp"
         android:src="@drawable/autor"
         android:onClick="seleccionar"
+        android:tag="rojo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -58,6 +61,7 @@
         android:layout_height="159dp"
         android:src="@drawable/autov"
         android:onClick="seleccionar"
+        android:tag="verde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mando"
-    tools:context="pe.edu.upc.racecity.MandoActivity">
+    tools:context="pe.edu.upc.racecity.Activities.MandoActivity">
 
 </android.support.constraint.ConstraintLayout>

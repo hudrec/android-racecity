@@ -1,4 +1,4 @@
-package pe.edu.upc.racecity;
+package pe.edu.upc.racecity.Activities;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -14,13 +14,12 @@ import com.connectsdk.device.ConnectableDevice;
 import com.connectsdk.device.DevicePicker;
 import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.service.WebOSTVService;
-import com.connectsdk.service.capability.listeners.ResponseListener;
 import com.connectsdk.service.command.ServiceCommandError;
 import com.connectsdk.service.sessions.WebAppSession;
 import com.connectsdk.service.sessions.WebAppSessionListener;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import pe.edu.upc.racecity.ConnectionHelper;
+import pe.edu.upc.racecity.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         DiscoveryManager.init(getApplicationContext());
         ConnectionHelper.discoveryManager = DiscoveryManager.getInstance();
         ConnectionHelper.discoveryManager.start();
+
+        // CAMBIAR FUENTES DE LOS TEXTOS DE LOS BOTONES
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Symtext.ttf");
         Button conectar_button = (Button) findViewById(R.id.btn_conectar);
         Button entrar_btn = (Button) findViewById(R.id.entrar);
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void conectar(View v){
+        //------INICIALIZAR EL DIS[POSITIVO AL HACER CLICK
+
         DevicePicker picker = new DevicePicker(this);
         AlertDialog dialog = picker.getPickerDialog("Seleccionar dispositivo", new AdapterView.OnItemClickListener() {
             @Override
@@ -68,49 +71,57 @@ public class MainActivity extends AppCompatActivity {
                 ConnectionHelper.webOSTVService = (WebOSTVService) ConnectionHelper.connectableDevice.getServiceByName("webOS TV");
                 ConnectionHelper.webOSTVService.connect();
                 //Join
-                ConnectionHelper.webOSTVService.joinWebApp("desaplg", new WebAppSession.LaunchListener() {
-                    @Override
-                    public void onError(ServiceCommandError serviceCommandError) {
-                        ConnectionHelper.webOSTVService.launchWebApp("desaplg", new WebAppSession.LaunchListener() {
-                            @Override
-                            public void onSuccess(WebAppSession webAppSession) {
-                                Button conectar_button = (Button) findViewById(R.id.btn_conectar);
-                                conectar_button.setText(ConnectionHelper.connectableDevice.getFriendlyName());
-                                Button entrar_btn = (Button) findViewById(R.id.entrar);
-                                conectar_button.setTextColor(Color.parseColor("#fe0030"));
-                                entrar_btn.setTextColor(Color.parseColor("#9ad035"));
-                                ConnectionHelper.webAppSession = webAppSession;
-//                                findViewById(R.id.button).setEnabled(true);
-//                                findViewById(R.id.nombreJugador).setEnabled(true);
-                                webAppSession.setWebAppSessionListener(webAppListener);
-                                ConnectionHelper.webAppSession.setWebAppSessionListener(webAppListener);
-//                                startActivity(new Intent(getApplicationContext(), DataActivity.class));
-
-                            }
-
-                            @Override
-                            public void onError(ServiceCommandError serviceCommandError) {
-
-                            }
-                        });
-                    }
+                ConnectionHelper.webOSTVService.launchWebApp("desaplg", new WebAppSession.LaunchListener() {
                     @Override
                     public void onSuccess(WebAppSession webAppSession) {
-
+                        Button conectar_button = (Button) findViewById(R.id.btn_conectar);
+                        conectar_button.setText(ConnectionHelper.connectableDevice.getFriendlyName());
+                        Button entrar_btn = (Button) findViewById(R.id.entrar);
+                        conectar_button.setTextColor(Color.parseColor("#fe0030"));
+                        entrar_btn.setTextColor(Color.parseColor("#9ad035"));
                         ConnectionHelper.webAppSession = webAppSession;
-//                        findViewById(R.id.entrar).setEnabled(true);
+//                                findViewById(R.id.button).setEnabled(true);
+//                                findViewById(R.id.nombreJugador).setEnabled(true);
                         webAppSession.setWebAppSessionListener(webAppListener);
                         ConnectionHelper.webAppSession.setWebAppSessionListener(webAppListener);
-//                        startActivity(new Intent(getApplicationContext(), DataActivity.class));
+//                                startActivity(new Intent(getApplicationContext(), DataActivity.class));
+
+                    }
+
+                    @Override
+                    public void onError(ServiceCommandError serviceCommandError) {
 
                     }
                 });
+//                ConnectionHelper.webOSTVService.joinWebApp("desaplg", new WebAppSession.LaunchListener() {
+//                    @Override
+//                    public void onError(ServiceCommandError serviceCommandError) {
+////
+//                    }
+//                    @Override
+//                    public void onSuccess(WebAppSession webAppSession) {
+//
+//                        ConnectionHelper.webAppSession = webAppSession;
+////                        findViewById(R.id.entrar).setEnabled(true);
+//                        webAppSession.setWebAppSessionListener(webAppListener);
+//                        ConnectionHelper.webAppSession.setWebAppSessionListener(webAppListener);
+////                        startActivity(new Intent(getApplicationContext(), DataActivity.class));
+//
+//                    }
+//                });
             }
         });
         dialog.show();
     }
 
+
     public void entrar(View view){
+
+        if (ConnectionHelper.webAppSession == null){
+            System.out.println("webAppSession is null");
+            return;
+        }
+
         Intent juego = new Intent(MainActivity.this, DataActivity.class);
         startActivity(juego);
     }

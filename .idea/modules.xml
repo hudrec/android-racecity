@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RaceCity.iml" filepath="$PROJECT_DIR$/RaceCity.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-racecity.iml" filepath="$PROJECT_DIR$/android-racecity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -76,7 +76,7 @@
         app:srcCompat="@drawable/boton_izquierdo"
         />
     <ImageView
-        android:id="@+id/ivDerecha"
+        android:id="@+id/iv_derecha"
         android:layout_width="@dimen/size_1"
         android:layout_height="@dimen/size_1"
         android:layout_marginTop="@dimen/m6"

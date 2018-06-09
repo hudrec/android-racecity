@@ -17,7 +17,7 @@ import pe.edu.upc.racecity.JsonHelper;
 import pe.edu.upc.racecity.R;
 
 public class AutoActivity extends AppCompatActivity {
-    String nombre = "";
+    String nombre;
     String carro = "verde";
 
 
@@ -50,6 +50,8 @@ public class AutoActivity extends AppCompatActivity {
             }
         );
         Intent mando = new Intent(AutoActivity.this, ControlActivity.class);
+        mando.putExtra("nombre",nombre);
+        mando.putExtra("color",carro);
         startActivity(mando);
     }
 

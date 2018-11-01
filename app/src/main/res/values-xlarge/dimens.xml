@@ -18,4 +18,12 @@
     <dimen name="ml_azul">35dp</dimen>
     <dimen name="mb_amarillo">100dp</dimen>
     <dimen name="mt_azul">105dp</dimen>
+
+    <dimen name="logo_ancho">150dp</dimen>
+    <dimen name="logo_largo">200dp</dimen>
+    <dimen name="auto_largo">159dp</dimen>
+    <dimen name="auto_ancho">180dp</dimen>
+
+
+
 </resources>

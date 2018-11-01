@@ -66,6 +66,6 @@ public class AutoActivity extends AppCompatActivity {
         carvView.setBackgroundColor(0);
 
         carro = String.valueOf(view.getTag());
-        view.setBackgroundColor(getResources().getColor(R.color.black_overlay));
+        view.setBackgroundColor(getResources().getColor(R.color.colorclick));
     }
 }
